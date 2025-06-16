@@ -50,13 +50,17 @@ local signs = {
   HINT = '󰌵',
   INFO = '',
 }
-vim.fn.sign_define("DiagnosticSignError", { text = signs.ERROR, texthl = "DiagnosticSignError" })
-vim.fn.sign_define("DiagnosticSignWarn",  { text = signs.WARN,  texthl = "DiagnosticSignWarn"  })
-vim.fn.sign_define("DiagnosticSignInfo",  { text = signs.INFO,  texthl = "DiagnosticSignInfo"  })
-vim.fn.sign_define("DiagnosticSignHint",  { text = signs.HINT,  texthl = "DiagnosticSignHint"  })
+
 vim.diagnostic.config({
   virtual_text = false,
-  signs = true,         -- Still show error/warning signs in the gutter
+  signs = {
+      text = {
+        [vim.diagnostic.severity.ERROR] = signs.ERROR,
+        [vim.diagnostic.severity.WARN] = signs.WARN,
+        [vim.diagnostic.severity.HINT] = signs.HINT,
+        [vim.diagnostic.severity.INFO] = signs.INFO,
+      },
+  },         -- Still show error/warning signs in the gutter
   underline = true,     -- Underline the problematic code
   float = {             -- Configuration for the automatic floating window
     -- IMPORTANT CHANGE HERE:
