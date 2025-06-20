@@ -48,6 +48,9 @@ o.incsearch = true          -- Incrementally highlight matching characters as yo
 o.ignorecase = true         -- Ignore capital letters during search.
 o.smartcase = true          -- Override the ignorecase option if searching for capital letters.
 
+-- o.autoread = true          -- Automatically read files that have been changed outside of Vim.
+-- o.autowrite = true         -- Automatically write changes to files before running external commands.
+
 -- Clipboard configuration
 -- 'unnamedplus' makes the '+' register (system clipboard) the default register
 -- for yank (y), delete (d), put (p), etc.

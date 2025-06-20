@@ -22,8 +22,7 @@ M.base46 = {
 -- M.nvdash = { load_on_startup = true }
 M.ui = {
     theme = "gruvbox",
-    tabufline = {
-    }
+    tabufline = {},
 }
 
 -- require("lazy").setup({

@@ -7,8 +7,11 @@ local options = {
 
   format_on_save = {
     -- These options will be passed to conform.format()
-    timeout_ms = 500,
-    lsp_fallback = true,
+        lsp_format = "fallback", -- Use LSP formatter if no conform formatter is found
+        timeout_ms = 500,
+        async = true, -- <--- ADD THIS LINE (or false for sync debugging)
+        -- Consider adding notify_on_error for better feedback:
+        notify_on_error = true,
   },
 }
 
