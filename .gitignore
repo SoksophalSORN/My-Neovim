@@ -1,1 +1,3 @@
-
+lazy-lock.json
+./lua/plugins/init.lua.bak
+./lua/plugins/nvim-treesitter.lua.bak
